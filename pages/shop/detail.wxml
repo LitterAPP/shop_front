@@ -182,7 +182,7 @@
 </block>
 <view class='blank' style='background:#fff;'></view>
 
-<view class='top' style=''>
+<view class='top' style='background:rgba(0,0,0,0)'>
   <fbutton extImgStyle='height:30px;width:30px;transform: rotate(90deg);' extStyle='width:30px;' adv='true' formType='submit' buttonImage='/images/pull_down_icon.png' buttonText='' bind:fbutton-tap='goBack' />
   <text class='top-title'></text>
 </view>

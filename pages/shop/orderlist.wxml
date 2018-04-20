@@ -100,7 +100,7 @@
       <text style='text-align:center;color:#949491;font-size:12px;'>-没有更多订单了-</text>
     </view>
   </view>
-  <view class='top' style='background:#fff;'>
+  <view class='top' >
     <fbutton extImgStyle='height:30px;width:30px;transform: rotate(90deg);' extStyle='width:30px;' adv='true' formType='submit' buttonImage='/images/pull_down_icon.png' buttonText='' bind:fbutton-tap='goBack' />
     <text class='top-title'>我的订单</text>
   </view>

@@ -12,8 +12,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
     var url = options.url
-    this.setData({url:url})
+    that.url = url
+    //console.log('url--->',url,decodeURIComponent(url))
+    this.setData({ url: decodeURIComponent(url)})
   },
 
   /**
@@ -62,6 +65,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    var that = this
+    return {
+      title: '好友分享',
+      path: '/pages/shop/webview?url='+that.url
+    }
   }
 })

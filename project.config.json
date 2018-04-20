@@ -37,6 +37,12 @@
 					"name": "moment",
 					"pathName": "pages/moment/list",
 					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "评论",
+					"pathName": "pages/wetao/comment",
+					"query": "wetaoid=3"
 				}
 			]
 		}

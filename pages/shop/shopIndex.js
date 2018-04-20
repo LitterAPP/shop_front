@@ -67,14 +67,18 @@ Page({
     }
     var tp = e.currentTarget.dataset.type
     var url = e.currentTarget.dataset.url
-    console.log('navLinkClick,type=',tp,'url=',url)
+
+    let pages = getCurrentPages();
+    console.log('navLinkClick,type=', tp, 'url=', url, 'pages', pages.length )
+   
+    
     if (tp==1){
       wx.navigateTo({
         url: url,
       })
     }else{
       wx.navigateTo({
-        url: '/pages/shop/webview?url='+url,
+        url: '/pages/shop/webview?url=' + encodeURIComponent(url),
       })
     }
   },
@@ -99,12 +103,19 @@ Page({
 
     let pages = getCurrentPages();
     console.log('getCurrentPages', pages)
-    if (pages.length > 1) {
+    if(pages.length>=9){
+      var url = pages[pages.length-1].route
+      wx.reLaunch({
+        url: url,
+      })
+    }else if (pages.length > 1) {
       wx.navigateBack({
         delta: 1
       })
     } else {
-       
+       wx.reLaunch({
+         url: '/pages/shop/shopIndex',
+       })
     }
   },
   openCoupon:function(){

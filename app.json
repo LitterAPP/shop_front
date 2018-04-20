@@ -13,7 +13,8 @@
     "pages/shop/categoryList",
     "pages/shop/productList",
     "pages/shop/webview",
-    "pages/moment/list"
+    "pages/moment/list",
+    "pages/wetao/comment"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FF8000",

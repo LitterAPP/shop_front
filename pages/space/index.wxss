@@ -5,7 +5,7 @@
   align-content: center;
   justify-content: center;
   height: 180px;
-  background: #ff8000;
+  background: linear-gradient(#451920,#810020);
 }
 .userinfo{
   display: flex;

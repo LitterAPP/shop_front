@@ -1,5 +1,5 @@
 page{
-  background: #f2f2f2;
+  background: linear-gradient(#F0F0F0,#F2F2F2);
 }
 .click-hover{
   background: #F3F3F7;
@@ -81,7 +81,7 @@ page{
   justify-content: space-around;
   width: 100%;
   background: #fff;
-  border-top:1px solid #FF8000; 
+   border-top:1px solid #FF8000;  
   z-index: 999;
 }
 .wrap-button{
@@ -140,9 +140,8 @@ page{
   align-items: center;
   justify-content: flex-start;
   height: 65px; 
-  padding-top: 10px;
-  padding-left: 10px;
-  background: rgba(0, 255, 255, 0); 
+  padding-top: 10px;   
+  background: linear-gradient(#451920,#810020);
 }
 
 .search{
@@ -169,12 +168,23 @@ page{
 }
 .top-title{
   font-family: Microsoft Yahei,"Times New Roman",Georgia,Serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  color:#2c2c2c;
+  color:#ffffff;
 }
 .topPlaceHolder{
   height: 75px;
   width: 100%;
-   background: rgba(0, 255, 255, 0); 
+  background: rgba(0, 255, 255, 0); 
+}
+.nomore{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.nomore text{
+  font-size: 13px;
+  color: #D3D3D3;
 }

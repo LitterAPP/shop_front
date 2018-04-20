@@ -160,7 +160,7 @@ class='fix-bottom'  style='background:green;color:#fff;'>
    去发货
 </view>
 
-<view class='top' style=' background: #d70606;'>
+<view class='top'>
   <fbutton extImgStyle='height:30px;width:30px;transform: rotate(90deg);' extStyle='width:30px;' adv='true' formType='submit' buttonImage='/images/pull_down_icon.png' buttonText='' bind:fbutton-tap='goBack' />
   <text class='top-title' style='color:#fff;'>订单详情</text>
 </view>

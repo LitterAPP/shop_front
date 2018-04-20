@@ -84,15 +84,7 @@
     <fbutton wx:if='{{item.linkType==1}}' data-type='{{item.type}}' data-url='{{item.url}}' extStyle='width:60px;background:rgba(0,0,0,0);color:#2c2c2c;' formType='submit' buttonText='{{item.text}}' bind:fbutton-tap='navLinkClick' />
   </view>
 </view>
-<view class='top'>
-  <!--
-  <fbutton extImgStyle='height:30px;width:30px;transform: rotate(90deg);' extStyle='width:30px;' adv='true' formType='submit' buttonImage='/images/pull_down_icon.png' buttonText='' bind:fbutton-tap='goBack' />  
-  <view class='search'>
-    <image src='/images/search_bar_0.png'></image>
-    <input type='text' placeholder='北' style='width:{{W-200}}px;'></input>
-  </view>
-  -->
-</view>
+ 
 <view wx:if='{{ coupons && coupons.length>0}}' class='open-coupon-btn'>
   <image src='/images/coupon_1.png' catchtap='openCoupon'></image>
 </view>
