@@ -43,6 +43,12 @@
 					"name": "评论",
 					"pathName": "pages/wetao/comment",
 					"query": "wetaoid=3"
+				},
+				{
+					"id": -1,
+					"name": "店铺首页",
+					"pathName": "pages/shop/shopIndex",
+					"query": "scene=shopId%3dSHOP-20180426170149-184839"
 				}
 			]
 		}

@@ -17,7 +17,7 @@ Page({
       var W = wx.getSystemInfoSync().windowWidth
       var H = wx.getSystemInfoSync().screenHeight
       that.setData({ W: W, H: H })
-
+      
       that.page=1
       that.pageSize=10
       that.pCategoryId = options.pCategoryId || ''
@@ -25,6 +25,7 @@ Page({
       that.isSale = options.isSale || false
       that.isHot = options.isHot || false
       that.isNew = options.isNew || false
+      that.shopId = options.shopId || 'SHOP_ADMIN_TEST'
       if (that.isNew){
         that.setData({ currentSort:1})
       }
@@ -48,6 +49,7 @@ Page({
       isSale: that.isSale,
       isHot: that.isHot,
       status: 1,
+      shopId: that.shopId,
       orderBy: that.orderBy(),
       page: that.page,
       pageSize: that.pageSize

@@ -183,6 +183,7 @@ page{
   align-items: center;
   align-content: center;
   justify-content: center;
+  margin-top:10px; 
 }
 .nomore text{
   font-size: 13px;

@@ -16,12 +16,31 @@ Page({
     var that = this
     var W = wx.getSystemInfoSync().windowWidth
     var H = wx.getSystemInfoSync().screenHeight
+    that.shopId = ''
+    var scene = decodeURIComponent(options.scene)
+    if (scene){
+      var scens = scene.split('&')
+      if (scens.length>0){
+        for(var i in scens){
+          var tmp = scens[i].split('=')
+          if (tmp.length!=2)continue
+          if(tmp[0]==='shopId'){
+            that.shopId = tmp[1]
+          }
+        }
+      }
+    }
+    console.log('the shop id is',that.shopId)
+    
     that.setData({W:W,H:H})
     that.getShopConfig()
   },
   getShopConfig:function(){
     var that = this
-    util.GET(app.globalData.host + '/shop/getShopIndexConfig', { shopId: 1 }, function (res) {
+    util.GET(app.globalData.host + '/shop/getShopIndexConfig', 
+    { 
+      shopId: that.shopId 
+    }, function (res) {
       if (res && res.code == 1 && res.data && res.data.config) {
         that.setData({ config: res.data.config, shopAvatar: res.data.shopAvatar, shopName: res.data.shopName, follow: res.data.follow, coupons: res.data.coupons || [] })
         if (that.data.coupons.length > 0) {
@@ -37,7 +56,7 @@ Page({
           }
         }
       } else {
-        //util.showToast('网络异常','error')
+        util.showToast(''+res.msg,'error')
       }
     })
   },

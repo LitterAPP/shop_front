@@ -1,16 +1,16 @@
 <!--放在最后，保证事件不被拦截-->
 <view class='banner'>
-  <image mode='aspectFill' style='width:{{W}}px;height:120px;' src='{{config.shopBanner}}'></image>
+  <image lazy-load mode='aspectFill' style='width:{{W}}px;height:120px;' src='{{config.shopBanner}}'></image>
   <view class='shopInfo'>
-    <image src='{{shopAvatar}}'></image>
+    <image lazy-load src='{{shopAvatar}}'></image>
     <view class='nameInfo'>
       <text>{{shopName}}</text>
       <view class='creitInfo'>
-        <image src='/images/zuan.png'></image>
-        <image src='/images/zuan.png'></image>
-        <image src='/images/zuan.png'></image>
-        <image src='/images/zuan.png'></image>
-        <image src='/images/zuan.png'></image>
+        <image lazy-load lazy-load src='/images/zuan.png'></image>
+        <image lazy-load src='/images/zuan.png'></image>
+        <image lazy-load src='/images/zuan.png'></image>
+        <image lazy-load src='/images/zuan.png'></image>
+        <image lazy-load src='/images/zuan.png'></image>
       </view>
     </view>
   </view>
@@ -57,7 +57,7 @@
   </block>
   <swiper wx:if='{{config && config.swiperList && config.swiperList.length>0}}' indicator-dots autoplay circular style='height:170px;'>
     <swiper-item wx:for='{{config.swiperList}}' wx:key='id'>
-      <image mode='aspectFill' data-type='{{item.type}}' data-url='{{item.url}}' catchtap='navLinkClick' style='width:{{W}}px;height:170px;' src='{{item.img}}'></image>
+      <image lazy-load mode='aspectFill' data-type='{{item.type}}' data-url='{{item.url}}' catchtap='navLinkClick' style='width:{{W}}px;height:170px;' src='{{item.img}}'></image>
     </swiper-item>
   </swiper>
   <block wx:if='{{config && config.thirdNavList && config.thirdNavList.length>0}}'>
@@ -72,7 +72,7 @@
   </block>
   <view wx:if='{{config && config.fourthNavList && config.fourthNavList.length>0}}'>
     <block wx:for='{{config.fourthNavList}}' wx:key='id'>
-      <image data-type='{{item.type}}' data-url='{{item.url}}' catchtap='navLinkClick' mode='aspectFill' style='width:{{W}}px;height:170px;' src='{{item.img}}'></image>
+      <image lazy-load data-type='{{item.type}}' data-url='{{item.url}}' catchtap='navLinkClick' mode='aspectFill' style='width:{{W}}px;height:170px;' src='{{item.img}}'></image>
     </block>
   </view>
 </scroll-view>
@@ -86,13 +86,13 @@
 </view>
  
 <view wx:if='{{ coupons && coupons.length>0}}' class='open-coupon-btn'>
-  <image src='/images/coupon_1.png' catchtap='openCoupon'></image>
+  <image lazy-load src='/images/coupon_1.png' catchtap='openCoupon'></image>
 </view>
 
 <view wx:if='{{ openCoupon && coupons && coupons.length>0}}' class='getcoupon' style='width:{{W}}px;height:{{H}}px;'>
   <view class='activityText'>
     <text wx:if='config.activityText'>{{config.activityText}}</text>
-    <image wx:if='config.activityBg' mode="scaleToFill" src='{{config.activityBg}}'></image>
+    <image lazy-load wx:if='config.activityBg' mode="scaleToFill" src='{{config.activityBg}}'></image>
   </view>
   <scroll-view class='getcoupon-scroll-view' scroll-with-animation scroll-y style='height:300px;width:220px;'>
     <view class='coupon-container' wx:for='{{coupons}}' wx:key='{{id}}'>
@@ -101,8 +101,8 @@
         <text wx:if='{{item.valid==1}}' style='color:#FF8247;font-size:12px;'>有效期：{{item.expireTime}}</text>
         <text wx:if='{{item.valid==0}}' style='color:#666;font-size:12px;'>有效期：{{item.expireTime}}</text>
         <view class='coupon-item'>
-          <image wx:if='{{item.valid==1}}' src='/images/coupon_1.png'></image>
-          <image wx:if='{{item.valid==0}}' src='/images/coupon_0.png'></image>
+          <image lazy-load wx:if='{{item.valid==1}}' src='/images/coupon_1.png'></image>
+          <image lazy-load wx:if='{{item.valid==0}}' src='/images/coupon_0.png'></image>
           <view wx:if='{{item.valid==1}}' class='coupon-item-1' style='line-height:15px;'>
             <text style='color:#d70606;font-size:14px;'>￥</text>
             <text style='color:#d70606;font-size:14px;'>{{item.amount}}</text>

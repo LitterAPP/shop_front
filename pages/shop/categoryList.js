@@ -23,11 +23,13 @@ Page({
       title: '请稍后...',
     })
     util.GET(app.globalData.host + '/ShopMng/categoryALL',
-      {}, function (res) {
+      {
+        shopId: options.shopId||''
+      }, function (res) {
         if(res && res.code == 1){
           that.setData({list : res.data})
         }else{
-          util.showToast('网络异常','error')
+          //util.showToast('网络异常','error')
         }
         wx.hideLoading()
       })
